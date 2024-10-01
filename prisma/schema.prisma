@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// model User {
+//   id          String       @id @default(uuid())
+//   fullName    String
+//   lastName    String
+//   email       String
+//   password    String
+//   createdTodo CreateTodo[]
+//     // gender String
+//   // age String
+//   // country String
+//   // phoneNumber String 
+//   // ActiveDay ActiveDay[]
+//   // Prioritet Prioritet[]
+// }
+
+// model CreateTodo {
+//   id          String @id @default(uuid())
+//   title       String
+//   description String
+//   userId      String
+//   user        User        @relation(fields: [userId], references: [id])
+  
+//     // activeDay   ActiveDay[]
+//   // prioritet   Prioritet[]
+// }
+
+// // model Prioritet {
+// //   id            String      @id @default(uuid())
+// //   low           String
+// //   medium        String
+// //   high          String
+// //   userId        String
+// //   user          User        @relation(fields: [userId], references: [id])
+// //   CreateTodo    CreateTodo? @relation(fields: [createTodoId], references: [id])
+// //   createTodoId  String?
+// // }
+
+// // model ActiveDay {
+// //   id           String      @id @default(uuid())
+// //   sunday       String
+// //   monday       String
+// //   thuesday     String
+// //   wednesday    String
+// //   thuersday    String
+// //   friday       String
+// //   saturday     String
+// //   userId       String
+// //   user         User        @relation(fields: [userId], references: [id])
+// //   CreateTodo   CreateTodo? @relation(fields: [createTodoId], references: [id])
+// //   createTodoId String?
+// // }
+
+
+
+
+
+model User {
+  id              String     @id @default(uuid())
+  email           String
+  password        String
+  name            String
+  createdEmployee  Todo[]
+}
+
+model Todo {
+  id        String @id @default(uuid())
+  title       String
+  description String
+  userId      String
+  createdAt   DateTime @default(now())
+  status    String  @default("Pending")
+  user        User        @relation(fields: [userId], references: [id])
+}

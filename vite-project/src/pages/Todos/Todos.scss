@@ -1,0 +1,185 @@
+.todos {
+    display: flex;
+    justify-content: center;
+    /* Центрируем контейнер на странице */
+
+    .todos-container {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        /* Автоматическая подстройка количества колонок */
+        gap: 20px;
+        width: 100%;
+        max-width: 1095px;
+
+
+        .todo-card {
+            width: 350px;
+            height: 300px;
+            border-radius: 10px;
+            border: 2px solid #1d242b;
+            margin-bottom: 20px;
+
+            box-sizing: border-box;
+            transition: .3s;
+
+            &:nth-last-of-type() {
+                margin-right: 0;
+            }
+
+            .todo-info {
+                padding: 30px;
+                font-weight: 500;
+                font-size: 16px;
+                color: rgb(0, 0, 0);
+
+
+                .todo-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+
+                    .todo-cart__title {
+
+                        word-break: break-all;
+                        white-space: normal;
+                    }
+
+                    .title-fc {
+                        align-items: center;
+                        display: flex;
+                        flex-direction: column;
+
+
+                        .edit-btn {
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+
+
+                            .edit-link {
+                                font-size: 20px !important;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+
+                }
+
+                .todo-desc {
+                    max-height: 100px;
+
+                    overflow-y: auto;
+
+                    word-break: break-word;
+
+                    margin: 30px 0;
+
+                    .todo-cart__desc {
+                        font-size: 15px;
+                        font-weight: 500;
+
+                    }
+                }
+
+                .todo-card__bottom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding-top: 10px;
+
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                    background-color: #f9f9f9;
+
+                    .todo-card__date {
+                        font-size: 15px;
+                        color: rgb(104, 102, 102);
+                    }
+
+                    .dropdown-container {
+                        position: relative;
+                    }
+
+            
+                    .dropdown-btn {
+                        width: 110px;
+                        padding: 8px 16px;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 4px;
+                        transition: background-color 0.3s, color 0.3s;
+
+                        &.pending-btn {
+                            background-color: #2da520;
+                            color: white;
+                        }
+
+                        &.in-progress-btn {
+                            background-color: #f39c12;
+                            color: white;
+
+                            &:hover {
+                                background-color: #e67e22;
+                            }
+                        }
+
+                        &.completed-btn {
+                            background-color: #a00707; //
+                            color: white;
+
+                            &:hover {
+                                background-color: rgb(211, 64, 64);
+                            }
+                        }
+                    }
+
+                    .dropdown-list {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        list-style: none;
+                        margin: 0;
+                        font-size: 15px;
+                        padding: 0;
+                        background-color: #fff;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+                        &.show {
+                            display: block;
+                        }
+                    }
+
+
+                    .dropdown-item {
+                        padding: 8px 16px;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background-color: #f1f1f1;
+                        }
+
+                        &.pending:hover {
+                            background-color: #2da520;
+                            color: white;
+                        }
+
+                        &.in-progress:hover {
+                            background-color: #f39c12;
+                            color: white;
+                        }
+
+                        &.completed:hover {
+                            background-color: #831a1a;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
