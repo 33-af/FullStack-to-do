@@ -1,0 +1,31 @@
+.custom0input::-moz-placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: black;
+}
+
+.custom0input::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: black;
+}
+
+.custom0input input::-moz-placeholder {
+  font-size: 15px;
+  color: black;
+}
+
+.custom0input input::placeholder {
+  font-size: 15px;
+  color: black;
+}
+
+.custom-button {
+  background-color: rgb(30, 151, 5) !important;
+  border-color: #4CAF50 !important;
+  transition: 0.3s ease-in-out;
+}
+.custom-button:hover {
+  background-color: rgb(233, 233, 233) !important;
+  color: rgb(30, 151, 5) !important;
+}/*# sourceMappingURL=page.css.map */

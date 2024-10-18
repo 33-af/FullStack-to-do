@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.succes-todo {
+  display: flex;
+  justify-content: center;
+}
+.succes-todo .succes-container {
+  margin: auto;
+  text-align: center;
+}
+.succes-todo .succes-container h1 {
+  font-weight: 600;
+  font-size: 25px;
+  margin: 30px auto;
+}
+.succes-todo .succes-container .succes-image {
+  width: 500px; /* Задайте фиксированную ширину для изображения */
+  height: auto; /* Сохраняйте пропорции изображения */
+  transition: transform 0.3s ease; /* Плавный переход для трансформации */
+}
+.succes-todo .succes-container .succes-image:hover {
+  transform: scale(1.1); /* Увеличение на 10% при наведении */
+}/*# sourceMappingURL=SuccesAddTodo.css.map */

@@ -1,0 +1,144 @@
+@charset "UTF-8";
+.todos {
+  display: flex;
+  justify-content: center;
+  /* Центрируем контейнер на странице */
+}
+.todos .todos-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Автоматическая подстройка количества колонок */
+  gap: 20px;
+  width: 100%;
+  max-width: 1095px;
+}
+.todos .todos-container .todo-card {
+  width: 350px;
+  height: 300px;
+  border-radius: 10px;
+  border: 2px solid #1d242b;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.todos .todos-container .todo-card:nth-last-of-type() {
+  margin-right: 0;
+}
+.todos .todos-container .todo-card .todo-info {
+  padding: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+}
+.todos .todos-container .todo-card .todo-info .todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todos .todos-container .todo-card .todo-info .todo-header .todo-cart__title {
+  word-break: break-all;
+  white-space: normal;
+}
+.todos .todos-container .todo-card .todo-info .todo-header .title-fc {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.todos .todos-container .todo-card .todo-info .todo-header .title-fc .edit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.todos .todos-container .todo-card .todo-info .todo-header .title-fc .edit-btn .edit-link {
+  font-size: 20px !important;
+  margin-bottom: 5px;
+}
+.todos .todos-container .todo-card .todo-info .todo-desc {
+  max-height: 100px;
+  overflow-y: auto;
+  word-break: break-word;
+  margin: 30px 0;
+}
+.todos .todos-container .todo-card .todo-info .todo-desc .todo-cart__desc {
+  font-size: 15px;
+  font-weight: 500;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .todo-card__date {
+  font-size: 15px;
+  color: rgb(104, 102, 102);
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-container {
+  position: relative;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-btn {
+  width: 110px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-btn.pending-btn {
+  background-color: #2da520;
+  color: white;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-btn.in-progress-btn {
+  background-color: #f39c12;
+  color: white;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-btn.in-progress-btn:hover {
+  background-color: #e67e22;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-btn.completed-btn {
+  background-color: #a00707;
+  color: white;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-btn.completed-btn:hover {
+  background-color: rgb(211, 64, 64);
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  font-size: 15px;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-list.show {
+  display: block;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-item {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-item.pending:hover {
+  background-color: #2da520;
+  color: white;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-item.in-progress:hover {
+  background-color: #f39c12;
+  color: white;
+}
+.todos .todos-container .todo-card .todo-info .todo-card__bottom .dropdown-item.completed:hover {
+  background-color: #831a1a;
+  color: white;
+}/*# sourceMappingURL=Todos.css.map */

@@ -1,0 +1,30 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.succesUpdatedTodo {
+  display: flex;
+  justify-content: center;
+}
+.succesUpdatedTodo .succesUpdatedTodo-container {
+  margin: auto;
+  text-align: center;
+}
+.succesUpdatedTodo .succesUpdatedTodo-container h1 {
+  font-weight: 600;
+  font-size: 25px;
+  margin: 30px auto;
+}
+.succesUpdatedTodo .succesUpdatedTodo-container .updated-image {
+  height: auto; /* Maintain image proportions */
+  transition: transform 0.3s ease;
+  animation: rotate 5s linear infinite; /* Added rotation */
+  /* Scale up on hover without conflicting with rotation */
+}
+.succesUpdatedTodo .succesUpdatedTodo-container .updated-image:hover {
+  transform: scale(1.1) rotate(0deg); /* Scale effect */
+}/*# sourceMappingURL=SuccesUpdatedTodo.css.map */
